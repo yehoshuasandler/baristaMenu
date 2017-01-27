@@ -1,0 +1,25 @@
+button{
+    height: 65px;
+    width: 105px;
+    padding: 0px;
+    margin-bottom: 20px
+}
+
+.empty-button{
+    height: 65px;
+    width: 105px;
+    padding: 0px;
+    color: rgba(255,255,255,0);
+    border-color:rgba(255,255,255,0);
+}
+
+
+.empty-button:hover, empty-button:hover,input[type='button']:focus{
+    
+    color: rgba(255,255,255,0);
+    border-color:rgba(255,255,255,0);
+}
+
+#app{
+    width: 960px;
+}

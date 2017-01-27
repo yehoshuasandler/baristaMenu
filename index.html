@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Barista Menu</title>
+            <meta name="author" content="Joshua Shoemaker">
+            <meta name="description" content="">
+             <!-- Mobile Specific Metas
+            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- FONT
+            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+            <!-- CSS
+            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/skeleton.css">
+            <link rel="stylesheet" href="css/style.css">
+
+        </head>
+
+        <body id="app" class="container">
+
+                <div class="row">
+                    <header class="eleven columns" style="margin-top: 25px;">
+                        <h4>Barista Menu</h4>
+                        <p>Starbucks does not have a training 
+                            setting on their POS for new partners. Thats stupid!
+                            I'm working on it! But only in my spare time. Wanna help? 
+                            - <a href="https://github.com/joshuashoemaker/baristaManu">Here's the Repo!</a></p>
+                    </header>
+                </div>
+
+            <div class="row" style="background-color: rgb(250, 250, 250);">
+
+                <div id="order" class="three columns">
+                    <h5>Order</h5>
+                    <code id="order-list"></code>
+                    <button class="button-primary" data-name="DELETE" data-value="">Delete</button>
+                </div>
+
+                <div id="menu" class="seven columns">
+                    <div id="options-menu">
+                    <h5>Drink Options</h5>
+                        <button class="button-primary" data-name="ICED" data-value="">ICED</button>
+
+                        <button class="empty-button" data-name="" data-value="">.</button>
+
+                        <button class="button-primary" data-name="CAFFEINE" data-value="DECAF">DECAF</button>
+                        <button class="button-primary" data-name="CAFFEINE" data-value="HALFCAF">1/2 Caf</button>
+                        
+                        <button class="empty-button" data-name="" data-value="">.</button>
+
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+
+                        <button class="button-primary" data-name="CAFFEINE" data-value="TWOTHIRDS">2/3 Caf</button>
+                        <button class="button-primary" data-name="CAFFEINE" data-value="THREEFOURTHS">3/4 Caf</button>
+                        
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        
+                        <button class="button-primary" data-name="SHOTCOUNT" data-value="SOLO">SOLO</button>
+                        <button class="button-primary" data-name="SHOTCOUNT" data-value="DOPPIO">DOPPIO</button>
+                        <button class="button-primary" data-name="SHOTCOUNT" data-value="TRIPLE">TRIPLE</button>
+                        <button class="button-primary" data-name="SHOTCOUNT" data-value="QUAD">QUAD</button>
+                        <button class="button-primary" data-name="SHOTCOUNT" data-value="MORESHOTS">MORESHOTS</button>
+
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+
+                        
+                        <button class="button-primary" data-name="SIZE" data-value="KIDS">KIDS</button>
+                        <button class="button-primary" data-name="SIZE" data-value="MINI">MINI</button>
+
+                        
+                        <button class="empty-button" data-name="" data-value="">.</button>
+
+                        <button class="button-primary" data-name="SHOTTYPE" data-value="RESTRETTO">RESTRETTO</button>
+                        <button class="button-primary" data-name="SHOTTYPE" data-value="LONG">LONG</button>
+                        
+                        <button class="button-primary" data-name="SIZE" data-value="SHORT">SHORT</button>
+                        <button class="button-primary" data-name="SIZE" data-value="TALL">TALL</button>
+                        <button class="button-primary" data-name="SIZE" data-value="GRANDE">GRANDE</button>
+                        <button class="button-primary" data-name="SIZE" data-value="VENTI">VENTI</button>
+                        <button class="button-primary" data-name="SIZE" data-value="TRENTA">TRENTA</button>
+                    </div>
+                    
+                    
+                    <div id="recipe-menu" style="display: none;">
+                        <h5>Drink Recipes</h5>
+                        <button class="button-primary" data-name="RECIPE" data-value="ESPRESSO">ESPRESSO</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="LATTE">LATTE</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="SKINNYLATTE">SKINNY LATTE</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="MOCHA">MOCHA</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="WHITEMOCHA">WHITE MOCHA</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="CARAMELMACCHIATO">CARAMEL MACCHIATO</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="ESPRESSOMACCHIATO">ESPRESSO MACCHIATO</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="LATTEMACCHIATO">LATTE MACCHIATO</button>
+                    </div>
+                    
+                    
+                    <div id="syrup-menu" style="display: none;">
+                        <h5>Syrups</h5>
+                        <button class="button-primary" data-name="SYRUP" data-value="VANILLA">VANILA</button>
+                        <button class="button-primary" data-name="SYRUP" data-value="SFVANILLA">SF VANILLA</button>
+                        <button class="button-primary" data-name="SYRUP" data-value="CARAMEL">CARAMEL</button>
+                        <button class="button-primary" data-name="SYRUP" data-value="TOFFEENUT">TOFFEE NUT</button>
+                        <button class="button-primary" data-name="SYRUP" data-value="HAZELNUT">HAZELNUT</button>
+                        <button class="button-primary" data-name="SYRUP" data-value="WHITEMOCHA">WHITE MOCHA</button>
+                        <button class="button-primary" data-name="SYRUP" data-value="MOCHA">MOCHA</button>
+                    </div>
+
+                </div>
+
+                
+                    <div class="one columns" id="drink-builder-options">
+                        <button class="button-primary" data-name="CONTROL" data-value="OPTIONS">DRINK</button>
+                        <button class="button-primary" data-name="CONTROL" data-value="RECIPE">RECIPE</button>
+                        <button class="button-primary" data-name="CONTROL" data-value="SYRUP">SYRUP</button>
+                    </div>
+
+            </div>
+
+            
+            <script src="js/lib/underscore.js"></script>
+
+            <script src="js/customTypes.js"></script>
+            <script src="js/standardRecipies.js"></script>
+            <script src="js/createDrink.js"></script>
+            <script src="js/order.js"></script>
+            <script src="js/app.js"></script>
+        </body>
+    </html>
