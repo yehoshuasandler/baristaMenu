@@ -31,6 +31,7 @@ orderSection.addEventListener('click', function(e){
 function orderDisplay(drink){
     let o = {
         name: "default Drink <br>",
+        iced: "",
         syrups: "",
         size: ""
     }
@@ -60,6 +61,13 @@ function orderDisplay(drink){
         o.name = drink.recipe.name + "<br>";
     }
 
+    if(drink.iced){
+        o.iced = "ICED<br>"
+    }
+    else{
+        o.iced = ""
+    }
+
     
     switch(drink.caffeine){
         case caffeineTypes.DECAF:
@@ -78,5 +86,5 @@ function orderDisplay(drink){
         }, this);
     }
 
-    return o.size + o.name + o.syrups + o.caffeine;
+    return o.size + o.name + o.iced + o.syrups + o.caffeine;
 }
