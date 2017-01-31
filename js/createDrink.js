@@ -8,8 +8,9 @@ function createDrink(){
             assigned: false,
             shotType: shotTypes.NORMAL,
             syrups: [],
+            addedSyrups: [],
             milk: milkTypes.NONE
-        }
+        },
     }
 }
 
@@ -139,12 +140,12 @@ function addSyrup(drink, syrup, qunatity){
         count: pumps
     }
 
-    let otherSyrups = _.without(drink.recipe.syrups, _.findWhere(drink.recipe.syrups, {
+    let otherSyrups = _.without(drink.recipe.addedSyrups, _.findWhere(drink.recipe.addedSyrups, {
         name: syrup
     }));
 
     otherSyrups.push(s);
-    drink.recipe.syrups = otherSyrups;
+    drink.recipe.addedSyrups = otherSyrups;
 
     return drink;
 }

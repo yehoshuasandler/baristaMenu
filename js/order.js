@@ -80,8 +80,8 @@ function orderDisplay(drink){
             o.caffeine = ""
     }
 
-    if(drink.recipe.syrups.length > 0){
-        drink.recipe.syrups.forEach(function(e) {
+    if(drink.recipe.addedSyrups.length > 0){
+        drink.recipe.addedSyrups.forEach(function(e) {
             o.syrups += e.name + "<br>"
         }, this);
     }
