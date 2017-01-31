@@ -5,3 +5,7 @@ mode on our POS systems so that new baristas could get a test run of how to hand
 transactions before having to do so with real guests to help easy the stress of how
 complex creating a drink order can be. These are the first stages of my efforts to 
 recreate the interface.
+
+
+Not all data shows on the invoice yet. Open the developer tools to inspect the data 
+further and how each input changes the model.
