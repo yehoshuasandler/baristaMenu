@@ -52,23 +52,33 @@ document.addEventListener('DOMContentLoaded', function(){
                 drinkOptionsMenu.style.display = "block";
                 recipeMenu.style.display = "none";
                 syrupMenu.style.display = "none";
+                brewedMenu.style.display = "none";
                 break;
-            case "RECIPE":
+            case "ESPRESSO":
                 drinkOptionsMenu.style.display = "none";
                 recipeMenu.style.display = "block";
+                brewedMenu.style.display = "none";
                 syrupMenu.style.display = "none";
                 break;
             case "SYRUP":
                 drinkOptionsMenu.style.display = "none";
                 recipeMenu.style.display = "none";
+                brewedMenu.style.display = "none";
                 syrupMenu.style.display = "block";
+                break;
+            case "BREWED":
+                drinkOptionsMenu.style.display = "none";
+                recipeMenu.style.display = "none";
+                syrupMenu.style.display = "none";
+                brewedMenu.style.display = "block";
                 break;
             
         }
     }
     let drinkOptionsMenu = document.getElementById("options-menu");
-    let recipeMenu = document.getElementById("recipe-menu");
+    let recipeMenu = document.getElementById("espresso-menu");
     let syrupMenu = document.getElementById("syrup-menu");
+    let brewedMenu = document.getElementById("brewed-menu");
 
 
 });

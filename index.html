@@ -28,7 +28,7 @@
                         <p>Starbucks does not have a training 
                             setting on their POS for new partners. Thats stupid!
                             I'm working on it! But only in my spare time. Wanna help? 
-                            - <a href="https://github.com/joshuashoemaker/baristaManu">Here's the Repo!</a></p>
+                            - <a href="https://github.com/joshuashoemaker/baristaMenu">Here's the Repo!</a></p>
                     </header>
                 </div>
 
@@ -40,7 +40,7 @@
                     <button class="button-primary" data-name="DELETE" data-value="">Delete</button>
                 </div>
 
-                <div id="menu" class="seven columns">
+                <div id="menu" class="seven columns" data-view="drink-builder">
                     <div id="options-menu" class="drink-menu">
                     <h5>Drink Options</h5>
                         <button class="button-primary" data-name="ICED" data-value="">ICED</button>
@@ -89,9 +89,22 @@
                         <button class="button-primary" data-name="SIZE" data-value="TRENTA">TRENTA</button>
                     </div>
                     
+                    <div id="brewed-menu" class="drink-menu" style="display: none;">
+                        <h5>Brewed</h5>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+
+                        <button class="button-primary" data-name="RECIPE" data-value="POUROVERPPR">POUR OVER PPR</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="POUROVERDARK">POUR OVER DARK</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="POUROVERBLOND">POUR OVER BLOND</button>
+                        <button class="button-primary" data-name="RECIPE" data-value="POUROVERDECAF">POUR OVER DECAF</button>
+                    </div>
                     
-                    <div id="recipe-menu" class="drink-menu" style="display: none;">
-                        <h5>Drink Recipes</h5>
+                    <div id="espresso-menu" class="drink-menu" style="display: none;">
+                        <h5>Espresso</h5>
                         <button class="button-primary" data-name="RECIPE" data-value="ESPRESSO">ESPRESSO</button>
                         <button class="button-primary" data-name="RECIPE" data-value="LATTE">LATTE</button>
                         <button class="button-primary" data-name="RECIPE" data-value="SKINNYLATTE">SKINNY LATTE</button>
@@ -127,11 +140,15 @@
 
 
                 
-                    <div class="one columns" id="drink-builder-options">
-                        <button class="button-default" data-name="CONTROL" data-value="OPTIONS">Decaf</button>
-                        <button class="button-default" data-name="CONTROL" data-value="OPTIONS">Shots</button>
-                        <button class="button-default" data-name="CONTROL" data-value="OPTIONS">Size</button>
-                    </div>
+                <div class="one columns" id="drink-builder-options">
+                    <h5>Options</h5>
+                    <button class="button-default" data-name="CONTROL" data-value="OPTIONS">Decaf</button>
+                    <button class="button-default" data-name="CONTROL" data-value="OPTIONS">Shots</button>
+                    <button class="button-default" data-name="CONTROL" data-value="OPTIONS">Size</button>
+                    <button class="button-default" data-name="CONTROL" data-value="SYRUP">Syrup</button>
+                    <button class="button-default" data-name="CONTROL" data-value="MILK">Milk</button>
+                    <button class="button-default" data-name="CONTROL" data-value="CUSTOM">Custom</button>
+                </div>
 
             </div>
 
