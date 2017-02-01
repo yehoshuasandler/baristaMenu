@@ -117,6 +117,9 @@ function addRecipe(drink, recipe){
             case "ESPRESSOMACCHIATO":
                 drink.recipe = Object.assign(drink.recipe, espressoMacchiato(drink));
                 break;
+            case "ESPRESSOCONPANNA":
+                drink.recipe = Object.assign(drink.recipe, espressoConPanna(drink));
+                break;
             case "LATTE":
                 drink.recipe = Object.assign(drink.recipe, latte(drink));
                 break;
