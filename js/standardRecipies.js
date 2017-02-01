@@ -28,9 +28,8 @@ function espressoMacchiato (drink) {
 
  function espressoConPanna (drink) { 
     let recipe = {
-        name: "Espresso Macchiato",
-        assigned: true,
-        milk: milkTypes.TWOPERCENT
+        name: "Espresso Con Panna",
+        assigned: true
     }
     return recipe;
  } 
