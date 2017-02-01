@@ -137,14 +137,17 @@ function addRecipe(drink, recipe){
     return drink;
 }
 
-function addSyrup(drink, syrup, qunatity){
+function addSyrup(recipe, syrup, size, qunatity){
 
     let pumps = 0;
     if(qunatity){
         pumps = qunatity
     }
+    else if(size){
+        pumps = standardPumps(size);
+    }
     else{
-        pumps = standardPumps(drink.size);
+        pumps = 1;
     }
 
     s = {
@@ -152,14 +155,14 @@ function addSyrup(drink, syrup, qunatity){
         count: pumps
     }
 
-    let otherSyrups = _.without(drink.recipe.addedSyrups, _.findWhere(drink.recipe.addedSyrups, {
+    let otherSyrups = _.without(recipe.addedSyrups, _.findWhere(recipe.addedSyrups, {
         name: syrup
     }));
 
     otherSyrups.push(s);
-    drink.recipe.addedSyrups = otherSyrups;
+    recipe.addedSyrups = otherSyrups;
 
-    return drink;
+    return recipe;
 }
 
 function standardPumps(size, mod){

@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         currentDrink = addRecipe(currentDrink, dataValue);
                         break;
                     case "SYRUP":
-                        currentDrink = addSyrup(currentDrink, dataValue);
+                        Object.assign(currentDrink.recipe, addSyrup(currentDrink.recipe, dataValue, currentDrink.size));
                         break;
                     case "CONTROL":
                         changeMenu(dataValue);
