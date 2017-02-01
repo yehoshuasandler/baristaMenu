@@ -68,19 +68,19 @@ function changeCaffeine(drink, caffeine){
 function changeShotType(drink, shotType) {
     switch(shotType){
         case "RESTRETTO":
-            if(drink.shotType === shotTypes.RESTRETTO){
-                drink.shotType = shotTypes.NORMAL;
+            if(drink.recipe.shotType === shotTypes.RESTRETTO){
+                drink.recipe.shotType = shotTypes.NORMAL;
             }
             else{
-                drink.shotType = shotTypes.RESTRETTO;
+                drink.recipe.shotType = shotTypes.RESTRETTO;
             }
         break;
         case "LONG":
-            if(drink.shotType === shotTypes.LONG){
-                drink.shotType = shotTypes.NORMAL;
+            if(drink.recipe.shotType === shotTypes.LONG){
+                drink.recipe.shotType = shotTypes.NORMAL;
             }
             else{
-                drink.shotType = shotTypes.LONG;
+                drink.recipe.shotType = shotTypes.LONG;
             }
         break;
     }
@@ -90,16 +90,16 @@ function changeShotType(drink, shotType) {
 function setShotCount(drink, count){
     switch(count){
         case "SOLO":
-            drink.shots = 1;
+            drink.recipe.shots = 1;
             break;
         case "DOPPIO":
-            drink.shots = 2;
+            drink.recipe.shots = 2;
             break;
         case "TRIPLE":
-            drink.shots = 3;
+            drink.recipe.shots = 3;
             break;
         case "QUAD":
-            drink.shots = 4;
+            drink.recipe.shots = 4;
             break;
     }
     return drink;
@@ -108,8 +108,20 @@ function setShotCount(drink, count){
 function addRecipe(drink, recipe){
     if(drink.recipe.assigned == false){
         switch(recipe){
+            case "AMERICANO":
+                drink.recipe = Object.assign(drink.recipe, americano(drink));
+                break;
+            case "ESPRESSO":
+                drink.recipe = Object.assign(drink.recipe, espresso(drink));
+                break;
+            case "ESPRESSOMACCHIATO":
+                drink.recipe = Object.assign(drink.recipe, espressoMacchiato(drink));
+                break;
             case "LATTE":
                 drink.recipe = Object.assign(drink.recipe, latte(drink));
+                break;
+            case "CINNDOLLATTE":
+                drink.recipe = Object.assign(drink.recipe, cinnamonDolceLatte(drink));
                 break;
             case "SKINNYLATTE":
                 drink.recipe = Object.assign(drink.recipe, skinnyLatte(drink));
@@ -188,4 +200,8 @@ function standardShots(size, mod){
         case drinkSizes.VENTI:
             return 2 + modValue;
     }
+}
+
+function espressoShotsDeclaration(){
+
 }
