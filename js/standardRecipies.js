@@ -72,9 +72,14 @@ function cinnamonDolceLatte (drink) {
         name: "Cinnamon Dolce Latte",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: milkTypes.TWOPERCENT,
+        syrups: [
+            {
+                name: "Cinnamon Dolce",
+                count: standardPumps(drink.size)
+            }
+        ]
     }
-    addSyrup(drink, "Cinnamon Dolce")
     return recipe;
  }
 
