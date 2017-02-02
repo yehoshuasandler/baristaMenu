@@ -82,16 +82,147 @@ function cinnamonDolceLatte (drink) {
     return recipe;
  }
 
+ function cappuccino (drink) { 
+    let recipe = {
+        name: "Cappuccino",
+        assigned: true,
+        shots: standardShots(drink.size),
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+ }
+
+ function flatWhite (drink) { 
+    let recipe = {
+        name: "Flat White",
+        assigned: true,
+        shots: standardShots(drink.size),
+        milk: milkTypes.WHOLEMILK
+    }
+    function shotsSBDS(){
+        switch (drink.size){
+            case drinkSizes.SHORT:
+                return 1;
+            case drinkSizes.TALL:
+                return 2;
+            case drinkSizes.GRANDE:
+                return 3;
+            case drinkSizes.VENTI:
+                return 3;
+        }
+    }
+    return recipe;
+ } 
+
+  function latteMacchiato (drink) { 
+    let recipe = {
+        name: "Latte Macchiato",
+        assigned: true,
+        shots: standardShots(drink.size),
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+ }
+
 function skinnyLatte (drink) { 
     let recipe = {
         name: "Skinny Syrup Latte",
         assigned: true,
-        syrups: [],
         shots: standardShots(drink.size),
         milk: milkTypes.NONFAT
     }
     return recipe;
  }
+
+ function skinnyCinnamonDolceLatte (drink) { 
+    let recipe = {
+        name: "Skinny Cinnamon Dolce Latte",
+        assigned: true,
+        shots: standardShots(drink.size),
+        milk: milkTypes.TWOPERCENT,
+        syrups: [
+            {
+                name: "SF Cinnamon Dolce",
+                count: standardPumps(drink.size)
+            }
+        ]
+    }
+    return recipe;
+ }
+
+ function caramelMacchiato (drink) { 
+    let recipe = {
+        name: "Caramel Macchiato",
+        assigned: true,
+        shots: standardShots(drink.size),
+        milk: milkTypes.TWOPERCENT,
+        syrups: [
+            {
+                name: "Vanilla",
+                count: standardPumps(drink.size, -1)
+            }
+        ]
+    }
+    return recipe;
+ }
+
+ function skinnyCaramelMacchiato (drink) { 
+    let recipe = {
+        name: "Skinny Caramel Macchiato",
+        assigned: true,
+        shots: standardShots(drink.size),
+        milk: milkTypes.NONFAT,
+        syrups: [
+            {
+                name: "SF Vanilla",
+                count: standardPumps(drink.size, -1)
+            }
+        ]
+    }
+    return recipe;
+ }
+
+  function skinnyCaramelMacchiato (drink) { 
+    let recipe = {
+        name: "Skinny Caramel Macchiato",
+        assigned: true,
+        shots: standardShots(drink.size),
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+ }
+
+function mocha(drink){
+    let recipe = {
+        name: "Mocha",
+        assigned: true,
+        syrups: [
+            {
+                name: 'Mocha',
+                count: standardPumps(drink.size)
+            }
+        ],
+        shots: standardShots(drink.size),
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+}
+
+function skinnyMocha(drink){
+    let recipe = {
+        name: "Skinny Mocha",
+        assigned: true,
+        syrups: [
+            {
+                name: 'Skinny Mocha',
+                count: standardPumps(drink.size)
+            }
+        ],
+        shots: standardShots(drink.size),
+        milk: milkTypes.NONFAT
+    }
+    return recipe;
+}
 
 function whiteMocha(drink){
     let recipe = {
@@ -99,11 +230,28 @@ function whiteMocha(drink){
         assigned: true,
         syrups: [
             {
-                name: 'WHITEMOCHA',
+                name: 'White Mocha',
                 count: standardPumps(drink.size)
             }
         ],
-        shots: standardShots(drink.size)
+        shots: standardShots(drink.size),
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+}
+
+function pumpkinSpiceLatte(drink){
+    let recipe = {
+        name: "Pumpkin Spice Latte",
+        assigned: true,
+        syrups: [
+            {
+                name: 'Pumpkin Spice',
+                count: standardPumps(drink.size)
+            }
+        ],
+        shots: standardShots(drink.size),
+        milk: milkTypes.TWOPERCENT
     }
     return recipe;
 }
