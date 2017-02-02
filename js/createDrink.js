@@ -120,17 +120,47 @@ function addRecipe(drink, recipe){
             case "ESPRESSOCONPANNA":
                 drink.recipe = Object.assign(drink.recipe, espressoConPanna(drink));
                 break;
+            case "DOUBLESHOT":
+                drink.recipe = Object.assign(drink.recipe, starbucksDoubleShotOnIce(drink));
+                break;
             case "LATTE":
                 drink.recipe = Object.assign(drink.recipe, latte(drink));
                 break;
             case "CINNDOLLATTE":
                 drink.recipe = Object.assign(drink.recipe, cinnamonDolceLatte(drink));
                 break;
+            case "CAPPUCCINO":
+                drink.recipe = Object.assign(drink.recipe, cappuccino(drink));
+                break;
+            case "FLATWHITE":
+                drink.recipe = Object.assign(drink.recipe, flatWhite(drink));
+                break;
+            case "LATTEMACCHIATO":
+                drink.recipe = Object.assign(drink.recipe, latteMacchiato(drink));
+                break;
             case "SKINNYLATTE":
                 drink.recipe = Object.assign(drink.recipe, skinnyLatte(drink));
                 break;
+            case "SKINNYCINNDOLLATTE":
+                drink.recipe = Object.assign(drink.recipe, skinnyCinnamonDolceLatte(drink));
+                break;
+            case "CARAMELMACCHIATO":
+                drink.recipe = Object.assign(drink.recipe, caramelMacchiato(drink));
+                break;
+            case "SKINNYCARAMELMACCHIATO":
+                drink.recipe = Object.assign(drink.recipe, skinnyCaramelMacchiato(drink));
+                break;
+            case "MOCHA":
+                drink.recipe = Object.assign(drink.recipe, mocha(drink))
+                break;
+            case "SKINNYMOCHA":
+                drink.recipe = Object.assign(drink.recipe, skinnyMocha(drink))
+                break;
             case "WHITEMOCHA":
                 drink.recipe = Object.assign(drink.recipe, whiteMocha(drink))
+                break;
+            case "PSL":
+                drink.recipe = Object.assign(drink.recipe, pumpkinSpiceLatte(drink))
                 break;
         }
     }
