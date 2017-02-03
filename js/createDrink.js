@@ -60,14 +60,16 @@ function changeCaffeine(drink, caffeine){
             else{
                 drink.caffeine = caffeineTypes.HALFCAF;
             }
-        case "TWOTHIRDSCALF":
+            break;
+        case "TWOTHIRDS":
             if(drink.caffeine === caffeineTypes.TWOTHIRDSCAF){
                 drink.caffeine = caffeineTypes.NORMAL;
             }
             else{
                 drink.caffeine = caffeineTypes.TWOTHIRDSCAF;
             }
-        case "THREEFOURTHSCAFE":
+            break;
+        case "THREEFOURTHS":
             if(drink.caffeine === caffeineTypes.THREEFOURTHSCAF){
                 drink.caffeine = caffeineTypes.NORMAL;
             }
