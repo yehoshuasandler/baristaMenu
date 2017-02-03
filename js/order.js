@@ -105,6 +105,12 @@ function orderDisplay(drink){
         case caffeineTypes.HALFCAF:
             o.caffeine = "1/2 Decaf <br>";
             break;
+        case caffeineTypes.TWOTHIRDSCAF:
+            o.caffeine = "2/3 Decaf <br>";
+            break;
+        case caffeineTypes.THREEFOURTHSCAF:
+            o.caffeine = "3/4 Decaf <br>";
+            break;
         default:
             o.caffeine = ""
     }

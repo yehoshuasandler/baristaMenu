@@ -39,5 +39,7 @@ const drinkSizes = {
 const caffeineTypes = {
     NORMAL: 1,
     DECAF: 2,
-    HALFCAF: 3
+    HALFCAF: 3,
+    TWOTHIRDSCAF: 4,
+    THREEFOURTHSCAF: 5
 }
