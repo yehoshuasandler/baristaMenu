@@ -33,7 +33,36 @@ function orderDisplay(drink){
         name: "default Drink <br>",
         iced: "",
         syrups: "",
-        size: ""
+        size: "",
+        shotDeclaration: ""
+    }
+
+    if(drink.recipe.shots != standardShots(drink.size)){
+        switch(drink.recipe.shots){
+            case 1:
+                o.shotDeclaration = "SOLO<br>";
+                break;
+            case 2:
+                o.shotDeclaration = "DOUBLE<br>";
+                break;
+            case 3:
+                o.shotDeclaration = "Triple<br>";
+                break;
+            case 4:
+                o.shotDeclaration = "QUAD<br>";
+                break;
+            default:
+                if(drink.recipe.shots){
+                    o.shotDeclaration = (drink.recipe.shots + " shot<br>") || "";
+                }
+                else{
+                    o.shotDeclaration = "";
+                }
+                
+        }
+    }
+    else{
+        o.shotDeclaration = "";
     }
 
     switch(drink.size){
@@ -86,5 +115,5 @@ function orderDisplay(drink){
         }, this);
     }
 
-    return o.size + o.name + o.iced + o.syrups + o.caffeine;
+    return o.size + o.name + o.shotDeclaration + o.iced + o.syrups + o.caffeine;
 }
