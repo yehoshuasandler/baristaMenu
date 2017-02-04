@@ -28,3 +28,27 @@ button{
 #app{
     width: 960px;
 }
+
+.button-yellow{
+    background-color: lightgoldenrodyellow;
+}
+
+.button-brown{
+    background-color: #FFF3E8;
+}
+
+.button-purple{
+    background-color: #F3E8FF;
+}
+
+.button-green{
+    background-color: #E8FFF3;
+}
+
+.button-grey{
+    background-color: #E8FCFF;
+}
+
+.button-blue{
+    background-color: #E8F4FF;
+}
