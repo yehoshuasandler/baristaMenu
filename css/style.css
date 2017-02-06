@@ -1,9 +1,11 @@
 button{
     height: 65px;
+    max-height: 65px;
     width: 105px;
     padding: 0px;
     margin-bottom: 20px;
     font-size: 8px;
+    white-space: wrap;
 }
 
 .empty-button{
