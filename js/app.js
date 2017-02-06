@@ -53,24 +53,35 @@ document.addEventListener('DOMContentLoaded', function(){
                 recipeMenu.style.display = "none";
                 syrupMenu.style.display = "none";
                 brewedMenu.style.display = "none";
+                blendedMenu.style.display = "none";v1`  124fy`
                 break;
             case "ESPRESSO":
                 drinkOptionsMenu.style.display = "none";
                 recipeMenu.style.display = "block";
                 brewedMenu.style.display = "none";
                 syrupMenu.style.display = "none";
+                blendedMenu.style.display = "none";
                 break;
             case "SYRUP":
                 drinkOptionsMenu.style.display = "none";
                 recipeMenu.style.display = "none";
                 brewedMenu.style.display = "none";
                 syrupMenu.style.display = "block";
+                blendedMenu.style.display = "none";
                 break;
             case "BREWED":
                 drinkOptionsMenu.style.display = "none";
                 recipeMenu.style.display = "none";
                 syrupMenu.style.display = "none";
                 brewedMenu.style.display = "block";
+                blendedMenu.style.display = "none";
+                break;
+            case "BLENDED":
+                drinkOptionsMenu.style.display = "none";
+                recipeMenu.style.display = "none";
+                syrupMenu.style.display = "none";
+                blendedMenu.style.display = "block";
+                brewedMenu.style.display = "none";
                 break;
             
         }
@@ -79,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let recipeMenu = document.getElementById("espresso-menu");
     let syrupMenu = document.getElementById("syrup-menu");
     let brewedMenu = document.getElementById("brewed-menu");
+    let blendedMenu = document.getElementById("blended-menu");
 
 
 });
