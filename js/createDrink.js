@@ -1,3 +1,5 @@
+"use strict"
+
 function createDrink(){
     return {
         size: drinkSizes.GRANDE,
@@ -124,6 +126,8 @@ function setShotCount(drink, count){
 function addRecipe(drink, recipe){
     if(drink.recipe.assigned == false){
         switch(recipe){
+
+            //ESPRESSO BERVERAGES
             case "AMERICANO":
                 drink.recipe = Object.assign(drink.recipe, americano(drink));
                 break;
@@ -178,6 +182,110 @@ function addRecipe(drink, recipe){
             case "PSL":
                 drink.recipe = Object.assign(drink.recipe, pumpkinSpiceLatte(drink))
                 break;
+
+            //BLENDED BEVERAGES
+            case "COFFEEFRAPP":
+                drink.recipe = Object.assign(drink.recipe, coffeeFrapp(drink))
+                break;
+            case "MOCHAFRAPP":
+                drink.recipe = Object.assign(drink.recipe, mochaFrapp(drink))
+                break;
+            case "CARAMELFRAPP":
+                drink.recipe = Object.assign(drink.recipe, caramelFapp(drink))
+                break;
+            case "JAVACHIPFRAPP":
+                drink.recipe = Object.assign(drink.recipe, javachipFrapp(drink))
+                break;
+            case "CAFEVANILLAFRAPP":
+                drink.recipe = Object.assign(drink.recipe, cafeVanillaFrapp(drink))
+                break;
+            case "ESPRESSOFRAPP":
+                drink.recipe = Object.assign(drink.recipe, espressoFrapp(drink))
+                break;
+            case "WHITEMOCHAFRAPP":
+                drink.recipe = Object.assign(drink.recipe, whiteMochaFrapp(drink))
+                break;
+            case "CHAIFRAPP":
+                drink.recipe = Object.assign(drink.recipe, chaiFrapp(drink))
+                break;
+            case "DOUBLECHOCFRAPP":
+                drink.recipe = Object.assign(drink.recipe, doubleChocolateChipFrapp(drink))
+                break;
+            case "VANILLABEANFRAPP":
+                drink.recipe = Object.assign(drink.recipe, vanillaBeanFrapp(drink))
+                break;
+            case "WMCREAMFRAPP":
+                drink.recipe = Object.assign(drink.recipe, whiteMochaCreamFrapp(drink))
+                break;
+            case "STRAWCREAMFRAPP":
+                drink.recipe = Object.assign(drink.recipe, strawBerryCreamFrapp(drink))
+                break;
+            case "GREENTEAFRAPP":
+                drink.recipe = Object.assign(drink.recipe, strawBerryCreamFrapp(drink))
+                break;
+            case "SYRUPFRAPP":
+                drink.recipe = Object.assign(drink.recipe, syrupCreamFrapp(drink))
+                break;
+            case "OPARAHCHAIFRAPP":
+                drink.recipe = Object.assign(drink.recipe, oparahChaiFrapp(drink))
+                break;
+            case "CHOCOLATESMOOTHIE":
+                drink.recipe = Object.assign(drink.recipe, chocolateSmoothe(drink))
+                break;
+            case "STRAWBERRYSMOOTHIE":
+                drink.recipe = Object.assign(drink.recipe, strawberrySmoothe(drink))
+                break;
+            case "BLENDEDSTRAWBERRY":
+                drink.recipe = Object.assign(drink.recipe, blendedStrawberryLemonade(drink))
+                break;
+
+            //Tea's
+            case "CHAITEALATTE":
+                drink.recipe = Object.assign(drink.recipe, chaiTeaLatte(drink))
+                break;
+            case "OPARAHCHAITEALATTE":
+                drink.recipe = Object.assign(drink.recipe, oparahChaiTeaLatte(drink))
+                break;
+            case "GREENTEALATTE":
+                drink.recipe = Object.assign(drink.recipe, greenTeaLatte(drink))
+                break;
+            case "BLACKICETEA":
+                drink.recipe = Object.assign(drink.recipe, blackIcedTea(drink))
+                break;
+            case "BLACKICETEALEMONADE":
+                drink.recipe = Object.assign(drink.recipe, blackIcedTeaLemonade(drink))
+                break;
+            case "MANGOBLACKICETEA":
+                drink.recipe = Object.assign(drink.recipe, mangoBlackTea(drink))
+                break;
+            case "MANGOBLACKICETEALEMONADE":
+                drink.recipe = Object.assign(drink.recipe, mangoBlackTeaLemonade(drink))
+                break;
+            case "GREENICETEA":
+                drink.recipe = Object.assign(drink.recipe, greenIcedTea(drink))
+                break;
+            case "GREENICETEALEMONADE":
+                drink.recipe = Object.assign(drink.recipe, greenTeaLemonade(drink))
+                break;
+            case "PEACHGREENICETEA":
+                drink.recipe = Object.assign(drink.recipe, peachGreenTea(drink))
+                break;
+            case "PEACHGREENICETEALEMONADE":
+                drink.recipe = Object.assign(drink.recipe, peachGreenTeaLemonade(drink))
+                break;
+            case "PASSIONICETEA":
+                drink.recipe = Object.assign(drink.recipe, passionIcedTea(drink))
+                break;
+            case "PASSIONTEALEMONADE":
+                drink.recipe = Object.assign(drink.recipe, passionIcedTeaLemonade(drink))
+                break;
+            case "CUSTOMICETEA":
+                drink.recipe = Object.assign(drink.recipe, customIcedTea(drink))
+                break;
+            case "CUSTOMICETEALEMONADE":
+                drink.recipe = Object.assign(drink.recipe, customIcedTeaLemonade(drink))
+                break;
+
         }
     }
     else 
@@ -199,7 +307,7 @@ function addSyrup(recipe, syrup, size, qunatity){
         pumps = 1;
     }
 
-    s = {
+    let s = {
         name: syrup,
         count: pumps
     }

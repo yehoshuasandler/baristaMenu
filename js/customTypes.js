@@ -1,3 +1,5 @@
+"use strict"
+
 const shotTypes = {
     NORMAL: 0,
     LONG: 1,

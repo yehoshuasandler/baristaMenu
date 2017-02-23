@@ -1,3 +1,5 @@
+"use strict"
+
 var currentDrink = createDrink();
 var selected = currentDrink;
 

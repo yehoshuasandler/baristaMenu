@@ -1,3 +1,6 @@
+"use strict"
+
+// ESPRESSO DRINKS
 function americano (drink) { 
     let recipe = {
         name: "Americano",
@@ -97,7 +100,7 @@ function cinnamonDolceLatte (drink) {
         name: "Flat White",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.WHOLEMILK
+        milk: milkTypes.WHOLE
     }
     function shotsSBDS(){
         switch (drink.size){
@@ -252,6 +255,657 @@ function pumpkinSpiceLatte(drink){
         ],
         shots: standardShots(drink.size),
         milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+}
+
+//BLENDED DRINKS
+function coffeeFrapp(drink){
+    let recipe = {
+        name: "Coffee Frapp",
+        assigned: true,
+        other: [
+            {
+                name: 'Frapp Roast',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Coffee Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function mochaFrapp(drink){
+    let recipe = {
+        name: "Mocha Frapp",
+        assigned: true,
+        syrups: [
+            {
+                name: 'Mocha',
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        other: [
+            {
+                name: 'Frapp Roast',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Coffee Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function caramelFrapp(drink){
+    let recipe = {
+        name: "Caramel Frapp",
+        assigned: true,
+        syrups: [
+            {
+                name: 'Caramel',
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        other: [
+            {
+                name: 'Frapp Roast',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Coffee Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function javachipFrapp(drink){
+    let recipe = {
+        name: "Java Chip Frapp",
+        assigned: true,
+        syrups: [
+            {
+                name: 'Mocha',
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        other: [
+            {
+                name: 'Frapp Roast',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: 'Chips',
+                count: standardPumps(drink.size)
+            },
+            {
+                name: "Coffee Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function cafeVanillaFrapp(drink){
+    let recipe = {
+        name: "Cafe Vanilla Frapp",
+        assigned: true,
+        other: [
+            {
+                name: 'Frapp Roast',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: 'Vanilla Bean',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Coffee Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function espressoFrapp(drink){
+    let recipe = {
+        name: "Espresso Frapp",
+        assigned: true,
+        milk: milkTypes.WHOLE,
+        shots: (function(){
+            if(drink.size == drinkSizes.VENTI){
+                return 2;
+            }
+            else{
+                return 1;
+            }
+        })(),
+        other: [
+            {
+                name: "Coffee Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ]
+    }
+    return recipe;
+}
+
+function whiteMochaFrapp(drink){
+    let recipe = {
+        name: "White Mocha Frapp",
+        assigned: true,
+        syrups: [
+            {
+                name: 'White Mocha',
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        other: [
+            {
+                name: 'Frapp Roast',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Coffee Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function chaiFrapp(drink){
+    let recipe = {
+        name: "Chai Tea Frapp",
+        assigned: true,
+        other: [
+            {
+                name: 'Chai Tea',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function doubleChocolateChipFrapp(drink){
+    let recipe = {
+        name: "Double Chocolate Chip Frapp",
+        assigned: true,
+        syrups: [
+            {
+                name: 'Mocha',
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        other: [
+            {
+                name: 'Chips',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function vanillaBeanFrapp(drink){
+    let recipe = {
+        name: "Vanilla Bean Frapp",
+        assigned: true,
+        other: [
+            {
+                name: 'Vanilla Bean',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function whiteMochaCreamFrapp(drink){
+    let recipe = {
+        name: "White Mocha Frapp",
+        assigned: true,
+        syrups: [
+            {
+                name: 'White Mocha',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function strawBerryCreamFrapp(drink){
+    let recipe = {
+        name: "Strawberries and Cream Frapp",
+        assigned: true,
+        other: [
+            {
+                name: "Straw Puree"
+            },
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function greenTeaFrapp(drink){
+    let recipe = {
+        name: "Green Tea Frapp",
+        assigned: true,
+        syrups: [
+            {
+                name: 'Classic',
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        other: [
+            {
+                name: 'Matcha',
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function syrupCreamFrapp(drink){
+    let recipe = {
+        name: "Syrup Cream Frapp",
+        assigned: true,
+        other: [
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function oparahChaiFrapp(drink){
+    let recipe = {
+        name: "Oparah Chai Tea Frapp",
+        assigned: true,
+        other: [
+            {
+                name: "Oparah Chai",
+                count: standardPumps(drink.size) - 1
+            },
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function strawberrySmoothe(drink){
+    let recipe = {
+        name: "Strawberry Smoothe",
+        assigned: true,
+        other: [
+            {
+                name: "Strawberry Puree"
+            },
+            {
+                name: "Protien",
+                count: 2
+            },
+            {
+                name: "Banana",
+                count: 1
+            }
+        ],
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+}
+
+function chocolateSmoothe(drink){
+    let recipe = {
+        name: "chocolate Smoothe",
+        assigned: true,
+        syrups: [
+            {
+                name: "Mocha",
+                count: 4
+            }
+        ],
+        other: [
+            {
+                name: "Protien", 
+                count: 2
+            },
+            {
+                name: "Banana",
+                count: 1
+            }
+        ],
+        milk: milkTypes.WHOLE
+    }
+    return recipe;
+}
+
+function blendedStrawberryLemonade(drink){
+    let recipe = {
+        name: "Blended Starwberry Lemonade",
+        assigned: true,
+        syrups: [
+            {
+                name: "Classic",
+                count: standardPumps(drink.size)
+            }
+        ],
+        other: [
+            {
+                name: "Strawberry Puree"
+            },
+            {
+                name: "Lemonade"
+            },
+            {
+                name: "Cream Syrup Base",
+                count: standardPumps(drink.size) - 1
+            }
+        ]
+    }
+}
+
+//Teas
+
+function chaiTeaLatte(drink){
+    let recipe = {
+        name: "Chai Tea Latte",
+        assigned: true,
+        other: [
+            {
+                name: "Chai",
+                count: standardPumps(drink.size)
+            }
+        ],
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+}
+
+function oparahChaiTeaLatte(drink){
+    let recipe = {
+        name: "Oparah Chai Tea Latte",
+        assigned: true,
+        other: [
+            {
+                name: "Oparah Chai",
+                count: standardPumps(drink.size)
+            }
+        ],
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+}
+
+function greenTeaLatte(drink){
+    let recipe = {
+        name: "Green Tea Latte", 
+        assigned: true,
+        other: [
+            {
+                name: "Matcha",
+                count: standardPumps(drink.size)
+            }
+        ],
+        milk: milkTypes.TWOPERCENT
+    }
+    return recipe;
+}
+
+function blackIcedTea(drink){
+    let recipe = {
+        name: "Black Iced Tea", 
+        assigned: true,
+        other: [
+            {
+                name: "Black Tea"
+            },
+            {
+                name: "Water"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function blackIcedTeaLemonade(drink){
+    let recipe = {
+        name: "Black Iced Tea Lemonade", 
+        assigned: true,
+        other: [
+            {
+                name: "Black Tea"
+            },
+            {
+                name: "Lemonade"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function mangoBlackTea(drink){
+    let recipe = {
+        name: "Mango Black Iced Tea", 
+        assigned: true,
+        syrup: [
+            {
+                name: "Mango",
+                count: standardPumps(drink.size)
+            }
+        ],
+        other: [
+            {
+                name: "Black Tea"
+            },
+            {
+                name: "Water"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function mangoBlackTeaLemonade(drink){
+    let recipe = {
+        name: "Mango Black Tea Lemonade", 
+        assigned: true,
+        syrup: [
+            {
+                name: "Mango",
+                count: standardPumps(drink.size)
+            }
+        ],
+        other: [
+            {
+                name: "Black Tea"
+            },
+            {
+                name: "Lemonade"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function greenIcedTea(drink){
+    let recipe = {
+        name: "Green Iced Tea", 
+        assigned: true,
+        other: [
+            {
+                name: "Green Tea"
+            },
+            {
+                name: "Water"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function greenTeaLemonade(drink){
+    let recipe = {
+        name: "Green Tea Lemonade", 
+        assigned: true,
+        other: [
+            {
+                name: "Green Tea"
+            },
+            {
+                name: "Lemonade"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function peachGreenTea(drink){
+    let recipe = {
+        name: "Peach Green Tea Lemonade", 
+        assigned: true,
+        syrups: [
+            {
+                name: "Peach"
+            }
+        ],
+        other: [
+            {
+                name: "Green Tea"
+            },
+            {
+                name: "Water"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function peachGreenTeaLemonade(drink){
+    let recipe = {
+        name: "Peach Green Tea Lemonade", 
+        assigned: true,
+        syrups: [
+            {
+                name: "Peach"
+            }
+        ],
+        other: [
+            {
+                name: "Green Tea"
+            },
+            {
+                name: "Lemonade"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function passionIcedTea(drink){
+    let recipe = {
+        name: "Passion Iced Tea", 
+        assigned: true,
+        other: [
+            {
+                name: "Passion Tea"
+            },
+            {
+                name: "Water"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function passionIcedTeaLemonade(drink){
+    let recipe = {
+        name: "Passion Tea Lemonade", 
+        assigned: true,
+        other: [
+            {
+                name: "Passion Tea"
+            },
+            {
+                name: "Lemonade"
+            }
+        ]
+    }
+    return recipe;
+}
+
+function customIcedTea(drink){
+    let recipe = {
+        name: "Custom Iced Tea",
+        assigned: true
+    }
+    return recipe;
+}
+
+function customIcedTeaLemonade(drink){
+    let recipe = {
+        name: "Custom Iced Tea Lemonade",
+        assigned: true,
+        other: [
+            {
+                name: "Lemonade"
+            }
+        ]
     }
     return recipe;
 }
