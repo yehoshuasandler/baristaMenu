@@ -322,6 +322,23 @@ function addSyrup(recipe, syrup, size, qunatity){
     return recipe;
 }
 
+function addOther(recipe, other, size, quantity){
+    let o = {};
+    o.name = other;
+    if(quantity){
+        o.count = quantity;
+    }
+
+    let otherOthers = _.without(recipe.addedOthers, _.findWhere(recipe.addedOthers, {
+        name: other
+    }));
+
+    otherOthers.push(o);
+    recipe.addedOthers = otherOthers;
+
+    return recipe;
+}
+
 function standardPumps(size, mod){
     let modValue;
     if(!mod)
