@@ -42,7 +42,13 @@ function espressoMacchiato (drink) {
         name: "Starbucks Double Shot On Ice",
         assigned: true,
         shots: shotsSBDS(),
-        milk: milkTypes.TWOPERCENT
+        milk: milkTypes.TWOPERCENT,
+        syrups: [
+            {
+                name: "Classic",
+                count: standardPumps(drink.size) - 1
+            }
+        ]
     }
     function shotsSBDS(){
         switch (drink.size){
@@ -906,6 +912,14 @@ function customIcedTeaLemonade(drink){
                 name: "Lemonade"
             }
         ]
+    }
+    return recipe;
+}
+
+function icedTeaRefill(drink){
+    let recipe ={
+        name: "Iced Tea Refill",
+        assigned: true
     }
     return recipe;
 }
