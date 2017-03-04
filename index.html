@@ -36,12 +36,16 @@
 
                 <div id="order" class="three columns">
                     <h5>Order</h5>
-                    <span id="order-list"></span>
-                    <button class="button-primary" data-name="DELETE" data-value="">Delete</button>
+                    <div class="order-container">
+                        <span id="order-list"></span>
+                        <div class="order-buttons">
+                            <button class="button-primary" data-name="DELETE" data-value="">Delete</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="menu" class="seven columns" data-view="drink-builder">
-                    <div id="options-menu" class="drink-menu">
+                    <div id="options-menu" class="drink-menu five-buttons">
                         <h5>Drink Options</h5>
                         <button class="button-blue" data-name="ICED" data-value="">ICED</button>
                         <button class="empty-button" data-name="" data-value="">.</button>
@@ -84,7 +88,7 @@
                         <button class="button-yellow" data-name="SIZE" data-value="TRENTA">TRENTA</button>
                     </div>
                     
-                    <div id="brewed-menu" class="drink-menu" style="display: none;">
+                    <div id="brewed-menu" class="drink-menu five-buttons" style="display: none;">
                         <h5>Brewed</h5>
                         <button class="empty-button" data-name="" data-value="">.</button>
                         <button class="empty-button" data-name="" data-value="">.</button>
@@ -125,7 +129,7 @@
 
                     </div>
                     
-                    <div id="espresso-menu" class="drink-menu" style="display: none;">
+                    <div id="espresso-menu" class="drink-menu five-buttons" style="display: none;">
                         <h5>Espresso</h5>
                         <button class="button-purple" data-name="RECIPE" data-value="AMERICANO">AMERICANO</button>
                         <button class="button-purple" data-name="RECIPE" data-value="ESPRESSO">ESPRESSO</button>
@@ -170,7 +174,7 @@
                         <button class="button-default" data-name="" data-value="">SEASONAL LATTE</button>
                     </div>
                     
-                    <div id="blended-menu" class="drink-menu" style="display: none;">
+                    <div id="blended-menu" class="drink-menu five-buttons" style="display: none;">
                         <h5>Blended</h5>
                         <button class="button-blue" data-name="" data-value="">LIGHT</button>
                         <button class="button-brown" data-name="RECIPE" data-value="COFFEEFRAPP">COFFEE FRAPP</button>
@@ -216,7 +220,7 @@
                         <button class="button-default" data-name="" data-value="">SEASONAL BLENDED</button>
                     </div>
                     
-                    <div id="tea-menu" class="drink-menu" style="display: none;">
+                    <div id="tea-menu" class="drink-menu five-buttons" style="display: none;">
                         <h5>Tea</h5>
                         <button class="button-yellow" data-name="RECIPE" data-value="CHAITEALATTE">CHAI TEA LATTE</button>
                         <button class="button-yellow" data-name="RECIPE" data-value="OPARAHCHAITEALATTE">OPARAH CHAI LATTE</button>
@@ -256,7 +260,7 @@
                         <button class="button-blue" data-name="RECIPE" data-value="ICEDTEAREFILL">ICED TEA REFILL</button>
                     </div>
                     
-                    <div id="syrup-menu" class="drink-menu" style="display: none;">
+                    <div id="syrup-menu" class="drink-menu five-buttons" style="display: none;">
                         <h5>Syrups</h5>
                         <button class="button-brown" data-name="SYRUP" data-value="Caramel">CARAMEL</button>
                         <button class="button-brown" data-name="SYRUP" data-value="Cinnamon Dolce">CINN DOLCE</button>
@@ -289,12 +293,52 @@
                         <button class="button-default" data-name="" data-value="">MORE SEASONAL SYRUP</button>
                     </div>
 
-                    <div id="other-menu" class="drink-menu" style="display: none;">
-                        <h5>Syrups</h5>
+                    <div id="custom-menu" class="drink-menu six-buttons" style="display: none;">
+                        <h5>Other</h5>
                         <button class="button-blue" data-name="OTHER" data-value="Ice">ICE</button>
+                        <button class="button-blue" data-name="OTHER" data-value="Water">WATER</button>
+                        <button class="button-blue" data-name="OTHER" data-value="Whipped Cream">WHOPPED CREAM</button>
+                        <button class="button-grey" data-name="OTHER" data-value="Vanilla Sweet Cream">VANILLA SWEET CREAM</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Stevia">STEVIA</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Honey">HONEY</button>
+                        
+                        <button class="button-brown" data-name="OTHER" data-value="Agave">AGAVE</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Sugar">SUGAR</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Splenda">SPLENDA</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Sweet'N Low'">SWEET'N LOW</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Equal">EQUAL</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Raw Sugar">RAW SUGAR</button>
+                        
+                        <button class="button-purple" data-name="OTHER" data-value="Protien">PROTIEN POWDER</button>
+                        <button class="button-purple" data-name="OTHER" data-value="Bannana">ADD BANNANA</button>
+                        <button class="button-purple" data-name="OTHER" data-value="Strawbery Puree">STRAWBERRY PUREE</button>
+                        <button class="button-purple" data-name="OTHER" data-value="Chips">FRAPP CHIPS</button>
+                        <button class="button-purple" data-name="OTHER" data-value="Vanilla Bean">VANILLA BEAN</button>
+                        <button class="button-purple" data-name="OTHER" data-value="Matcha">MATCHA</button>
+                        
+                        <button class="button-grey" data-name="OTHER" data-value="Mocha Drizzle">MOCHA DRIZZLE</button>
+                        <button class="button-grey" data-name="OTHER" data-value="Caramel Drizzle">CARAMEL DRIZZLE</button>
+                        <button class="button-grey" data-name="OTHER" data-value="No Topping">NO TOPPING</button>
+                        <button class="button-grey" data-name="OTHER" data-value="Coconut Flakes">COCONUT FLAKES</button>
+                        <button class="button-grey" data-name="OTHER" data-value="Nonfat Greek Yogurt">NONFAT GREEK YOGURT</button>
+                        <button class="button-grey" data-name="OTHER" data-value="Add Blueberry">ADD BLUEBERRY</button>
+                        
+                        <button class="button-brown" data-name="OTHER" data-value="Black Tea">BLACK TEA BASE</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Green Tea">GREEN TEA BASE</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Passion Tea">PASSION TEA BASE</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Berry Hibiscus">BERRY HIBISCUS BASE</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Cool Lime">COOL LIME BASE</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Strawberry Acai">STRAWBERRY ACAI BASE</button>
+                        
+                        <button class="button-default" data-name="OTHER" data-value="Foam">FOAM</button>
+                        <button class="button-default" data-name="OTHER" data-value="w/ room">WITH ROOM</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="empty-button" data-name="" data-value="">.</button>
+                        <button class="button-brown" data-name="OTHER" data-value="Apple Juice">APPLE JUICE</button>
+                        <button class="button-yellow" data-name="OTHER" data-value="Lemonade">LEMONADE</button>
                     </div>
 
-                    <div class="drink-maker-tabs">
+                    <div class="drink-maker-tabs five-buttons">
                         <button class="button-default" data-name="CONTROL" data-value="BREWED">BREWED</button>
                         <button class="button-default" data-name="CONTROL" data-value="ESPRESSO">ESPRESSO</button>
                         <button class="button-default" data-name="CONTROL" data-value="BLENDED">BLENDED</button>

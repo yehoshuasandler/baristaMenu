@@ -664,6 +664,7 @@ function blendedStrawberryLemonade(drink){
             }
         ]
     }
+    return recipe;
 }
 
 //Teas
@@ -757,7 +758,7 @@ function mangoBlackTea(drink){
         ],
         other: [
             {
-                name: "Black Tea"
+                name: "PAssion Tea"
             },
             {
                 name: "Water"
@@ -779,7 +780,7 @@ function mangoBlackTeaLemonade(drink){
         ],
         other: [
             {
-                name: "Black Tea"
+                name: "Passion Tea"
             },
             {
                 name: "Lemonade"

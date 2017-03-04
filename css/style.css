@@ -23,12 +23,35 @@ button{
     border-color:rgba(255,255,255,0);
 }
 
+#app{
+    width: 1400px;
+}
+
+#menu{
+    height: 660px;
+    width: 800px;
+}
+
+#order{
+    width: 220px;
+}
+
+#drink-builder-options{
+    background-color: lightgoldenrodyellow;
+    width: 105px;
+}
+
 .drink-menu{
+    margin: 0px auto;
     height: 660px;
 }
 
-#app{
-    width: 960px;
+.five-buttons button{
+    margin: 0px 2% 20px;
+}
+
+.six-buttons button{
+    margin: 5px 1%;
 }
 
 .button-yellow{

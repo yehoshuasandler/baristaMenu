@@ -11,7 +11,9 @@ function createDrink(){
             shotType: shotTypes.NORMAL,
             syrups: [],
             addedSyrups: [],
-            milk: milkTypes.NONE
+            other: [],
+            addedOthers: [],
+            milk: milkTypes.NONE,
         },
     }
 }
@@ -325,6 +327,7 @@ function addSyrup(recipe, syrup, size, qunatity){
 function addOther(recipe, other, size, quantity){
     let o = {};
     o.name = other;
+    
     if(quantity){
         o.count = quantity;
     }

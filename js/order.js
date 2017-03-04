@@ -35,6 +35,7 @@ function orderDisplay(drink){
         name: "default Drink <br>",
         iced: "",
         syrups: "",
+        other: "",
         size: "",
         shotDeclaration: ""
     }
@@ -123,5 +124,17 @@ function orderDisplay(drink){
         }, this);
     }
 
-    return o.size + o.name + o.shotDeclaration + o.iced + o.syrups + o.caffeine;
+    if(drink.recipe.addedOthers.length > 0){
+        drink.recipe.addedOthers.forEach(function(e) {
+            o.other += e.name + "<br>"
+        }, this);
+    }
+
+    return  o.size + 
+            o.name + 
+            o.iced + 
+            o.shotDeclaration + 
+            o.caffeine + 
+            o.syrups + 
+            o.other;
 }
