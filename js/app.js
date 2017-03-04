@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 brewedMenu.style.display = "none";
                 blendedMenu.style.display = "none";
                 teaMenu.style.display = "none";
+                milkMenu.style.display = "none";
                 customMenu.style.display = "none";
                 break;
             case "ESPRESSO":
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 syrupMenu.style.display = "none";
                 blendedMenu.style.display = "none";
                 teaMenu.style.display = "none";
+                milkMenu.style.display = "none";
                 customMenu.style.display = "none";
                 break;
             case "SYRUP":
@@ -78,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 syrupMenu.style.display = "block";
                 blendedMenu.style.display = "none";
                 teaMenu.style.display = "none";
+                milkMenu.style.display = "none";
                 customMenu.style.display = "none";
                 break;
             case "BREWED":
@@ -87,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 brewedMenu.style.display = "block";
                 blendedMenu.style.display = "none";
                 teaMenu.style.display = "none";
+                milkMenu.style.display = "none";
                 customMenu.style.display = "none";
                 break;
             case "BLENDED":
@@ -96,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 blendedMenu.style.display = "block";
                 brewedMenu.style.display = "none";
                 teaMenu.style.display = "none";
+                milkMenu.style.display = "none";
                 customMenu.style.display = "none";
                 break;
             case "TEA":
@@ -105,7 +110,18 @@ document.addEventListener('DOMContentLoaded', function(){
                 blendedMenu.style.display = "none";
                 brewedMenu.style.display = "none";
                 teaMenu.style.display = "block";
+                milkMenu.style.display = "none";
                 customMenu.style.display = "none";
+                break;
+            case "MILK":
+                drinkOptionsMenu.style.display = "none";
+                recipeMenu.style.display = "none";
+                syrupMenu.style.display = "none";
+                blendedMenu.style.display = "none";
+                brewedMenu.style.display = "none";
+                teaMenu.style.display = "none";
+                customMenu.style.display = "none";
+                milkMenu.style.display = "block";
                 break;
             case "CUSTOM":
                 drinkOptionsMenu.style.display = "none";
@@ -115,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 brewedMenu.style.display = "none";
                 teaMenu.style.display = "none";
                 customMenu.style.display = "block";
+                milkMenu.style.display = "none";
                 break;
             
         }
@@ -125,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let brewedMenu = document.getElementById("brewed-menu");
     let blendedMenu = document.getElementById("blended-menu");
     let teaMenu = document.getElementById("tea-menu");
+    let milkMenu = document.getElementById("milk-menu");
     let customMenu = document.getElementById("custom-menu");
 
 

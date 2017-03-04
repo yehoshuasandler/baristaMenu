@@ -69,19 +69,19 @@ function orderDisplay(drink){
     }
 
     switch(drink.size){
-        case drinkSizes.SHORT:
+        case "Short":
             o.size = "SH ";
             break;
-        case drinkSizes.TALL:
+        case "Tall":
             o.size = "TL ";
             break;
-        case drinkSizes.GRANDE:
+        case "Grande":
             o.size = "GR "; 
             break;
-        case drinkSizes.VENTI:
+        case "Venti":
             o.size = "VT ";
             break;
-        case drinkSizes.TRENTA:
+        case "Trenta":
             o.size = "TR ";
             break;
     }
@@ -94,7 +94,7 @@ function orderDisplay(drink){
     }
 
     if(drink.iced){
-        o.iced = "ICED<br>"
+        o.iced = "ICED "
     }
     else{
         o.iced = ""
@@ -102,16 +102,16 @@ function orderDisplay(drink){
 
     
     switch(drink.caffeine){
-        case caffeineTypes.DECAF:
+        case "Decaf":
             o.caffeine = "Decaf <br>";
             break;
-        case caffeineTypes.HALFCAF:
+        case "1/2 Decaf":
             o.caffeine = "1/2 Decaf <br>";
             break;
-        case caffeineTypes.TWOTHIRDSCAF:
+        case "2/3 Decaf":
             o.caffeine = "2/3 Decaf <br>";
             break;
-        case caffeineTypes.THREEFOURTHSCAF:
+        case "3/4 Decaf":
             o.caffeine = "3/4 Decaf <br>";
             break;
         default:
@@ -131,8 +131,8 @@ function orderDisplay(drink){
     }
 
     return  o.size + 
-            o.name + 
             o.iced + 
+            o.name + 
             o.shotDeclaration + 
             o.caffeine + 
             o.syrups + 

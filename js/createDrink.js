@@ -2,18 +2,16 @@
 
 function createDrink(){
     return {
-        size: drinkSizes.GRANDE,
+        size: "Grande",
         iced: false,
-        caffeine: caffeineTypes.NORMAL,
-        type: drinkTypes.DRINK,
+        caffeine: "Normal",
         recipe: {
             assigned: false,
-            shotType: shotTypes.NORMAL,
+            shotType: "Normal",
             syrups: [],
             addedSyrups: [],
             other: [],
-            addedOthers: [],
-            milk: milkTypes.NONE,
+            addedOthers: []
         },
     }
 }
@@ -21,19 +19,19 @@ function createDrink(){
 function changeSize(drink, size) {
     switch(size){
         case "SHORT":
-            drink.size = drinkSizes.SHORT;
+            drink.size = "Short";
             break;
         case "TALL":
-            drink.size = drinkSizes.TALL;
+            drink.size = "Tall";
             break;
         case "GRANDE":
-            drink.size = drinkSizes.GRANDE;
+            drink.size = "Grande";
             break;
         case "VENTI":
-            drink.size = drinkSizes.VENTI;
+            drink.size = "Venti";
             break;
         case "TRENTA":
-            drink.size = drinkSizes.TRENTA;
+            drink.size = "Trenta";
             break;
     }
     return drink;
@@ -50,35 +48,35 @@ function changeIced(drink){
 function changeCaffeine(drink, caffeine){
     switch(caffeine){
         case "DECAF":
-            if(drink.caffeine === caffeineTypes.DECAF){
-                drink.caffeine = caffeineTypes.NORMAL;
+            if(drink.caffeine === "Decaf"){
+                drink.caffeine = "Normal";
             }
             else{
-                drink.caffeine = caffeineTypes.DECAF;
+                drink.caffeine = "Decaf";
             }
             break;
         case "HALFCAF":
-            if(drink.caffeine === caffeineTypes.HALFCAF){
-                drink.caffeine = caffeineTypes.NORMAL;
+            if(drink.caffeine === "1/2 Decaf"){
+                drink.caffeine = "Normal";
             }
             else{
-                drink.caffeine = caffeineTypes.HALFCAF;
+                drink.caffeine = "1/2 Decaf";
             }
             break;
         case "TWOTHIRDS":
-            if(drink.caffeine === caffeineTypes.TWOTHIRDSCAF){
-                drink.caffeine = caffeineTypes.NORMAL;
+            if(drink.caffeine === "2/3 Decaf"){
+                drink.caffeine = "Normal";
             }
             else{
-                drink.caffeine = caffeineTypes.TWOTHIRDSCAF;
+                drink.caffeine = "2/3 Decaf";
             }
             break;
         case "THREEFOURTHS":
-            if(drink.caffeine === caffeineTypes.THREEFOURTHSCAF){
-                drink.caffeine = caffeineTypes.NORMAL;
+            if(drink.caffeine === "3/4 Decaf"){
+                drink.caffeine = "Normal";
             }
             else{
-                drink.caffeine = caffeineTypes.THREEFOURTHSCAF;
+                drink.caffeine = "3/4 Decaf";
             }
             break;
     }
@@ -87,20 +85,20 @@ function changeCaffeine(drink, caffeine){
 
 function changeShotType(drink, shotType) {
     switch(shotType){
-        case "RESTRETTO":
-            if(drink.recipe.shotType === shotTypes.RESTRETTO){
-                drink.recipe.shotType = shotTypes.NORMAL;
+        case "Restretto":
+            if(drink.recipe.shotType === "Restretto"){
+                drink.recipe.shotType = "Normal";
             }
             else{
-                drink.recipe.shotType = shotTypes.RESTRETTO;
+                drink.recipe.shotType = "Restretto";
             }
         break;
-        case "LONG":
-            if(drink.recipe.shotType === shotTypes.LONG){
-                drink.recipe.shotType = shotTypes.NORMAL;
+        case "Long":
+            if(drink.recipe.shotType === "Long"){
+                drink.recipe.shotType = "Normal";
             }
             else{
-                drink.recipe.shotType = shotTypes.LONG;
+                drink.recipe.shotType = "Long";
             }
         break;
     }
@@ -350,15 +348,15 @@ function standardPumps(size, mod){
         modValue = mod;
 
     switch(size){
-        case drinkSizes.SHORT:
+        case "Short":
             return 2 + modValue;
-        case drinkSizes.TALL:
+        case "Tall":
             return 3 + modValue;
-        case drinkSizes.GRANDE:
+        case "Grande":
             return 4 + modValue;
-        case drinkSizes.VENTI:
+        case "Venti":
             return 5 + modValue;
-        case drinkSizes.TRENTA:
+        case "Trenta":
             return 7 + modValue;
     }
 }
@@ -371,13 +369,13 @@ function standardShots(size, mod){
         modValue = mod;
 
     switch(size){
-        case drinkSizes.SHORT:
+        case "Short":
             return 1 + modValue;
-        case drinkSizes.TALL:
+        case "Tall":
             return 1 + modValue;
-        case drinkSizes.GRANDE:
+        case "Grande":
             return 2 + modValue;
-        case drinkSizes.VENTI:
+        case "Venti":
             return 2 + modValue;
     }
 }

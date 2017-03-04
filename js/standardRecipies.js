@@ -6,7 +6,7 @@ function americano (drink) {
         name: "Americano",
         assigned: true,
         shots: standardShots(drink.size, 1),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
  }
@@ -24,7 +24,7 @@ function espressoMacchiato (drink) {
         name: "Espresso Macchiato",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
  }
@@ -42,7 +42,7 @@ function espressoMacchiato (drink) {
         name: "Starbucks Double Shot On Ice",
         assigned: true,
         shots: shotsSBDS(),
-        milk: milkTypes.TWOPERCENT,
+        milk: "2% Milk",
         syrups: [
             {
                 name: "Classic",
@@ -70,7 +70,7 @@ function latte (drink) {
         name: "Latte",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
  }
@@ -80,7 +80,7 @@ function cinnamonDolceLatte (drink) {
         name: "Cinnamon Dolce Latte",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT,
+        milk: "2% Milk",
         syrups: [
             {
                 name: "Cinnamon Dolce",
@@ -96,7 +96,7 @@ function cinnamonDolceLatte (drink) {
         name: "Cappuccino",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
  }
@@ -106,7 +106,7 @@ function cinnamonDolceLatte (drink) {
         name: "Flat White",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     function shotsSBDS(){
         switch (drink.size){
@@ -128,7 +128,7 @@ function cinnamonDolceLatte (drink) {
         name: "Latte Macchiato",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
  }
@@ -138,7 +138,7 @@ function skinnyLatte (drink) {
         name: "Skinny Syrup Latte",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.NONFAT
+        milk: "Nonfat Milk"
     }
     return recipe;
  }
@@ -148,7 +148,7 @@ function skinnyLatte (drink) {
         name: "Skinny Cinnamon Dolce Latte",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT,
+        milk: "2% Milk",
         syrups: [
             {
                 name: "SF Cinnamon Dolce",
@@ -164,7 +164,7 @@ function skinnyLatte (drink) {
         name: "Caramel Macchiato",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT,
+        milk: "2% Milk",
         syrups: [
             {
                 name: "Vanilla",
@@ -180,7 +180,7 @@ function skinnyLatte (drink) {
         name: "Skinny Caramel Macchiato",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.NONFAT,
+        milk: "Nonfat Milk",
         syrups: [
             {
                 name: "SF Vanilla",
@@ -196,7 +196,7 @@ function skinnyLatte (drink) {
         name: "Skinny Caramel Macchiato",
         assigned: true,
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
  }
@@ -212,7 +212,7 @@ function mocha(drink){
             }
         ],
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
 }
@@ -228,7 +228,7 @@ function skinnyMocha(drink){
             }
         ],
         shots: standardShots(drink.size),
-        milk: milkTypes.NONFAT
+        milk: "Nonfat Milk"
     }
     return recipe;
 }
@@ -244,7 +244,7 @@ function whiteMocha(drink){
             }
         ],
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
 }
@@ -260,7 +260,7 @@ function pumpkinSpiceLatte(drink){
             }
         ],
         shots: standardShots(drink.size),
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
 }
@@ -280,7 +280,7 @@ function coffeeFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -305,7 +305,7 @@ function mochaFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -330,7 +330,7 @@ function caramelFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -359,7 +359,7 @@ function javachipFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -382,7 +382,7 @@ function cafeVanillaFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -391,7 +391,7 @@ function espressoFrapp(drink){
     let recipe = {
         name: "Espresso Frapp",
         assigned: true,
-        milk: milkTypes.WHOLE,
+        milk: "Whole Milk",
         shots: (function(){
             if(drink.size == drinkSizes.VENTI){
                 return 2;
@@ -430,7 +430,7 @@ function whiteMochaFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -449,7 +449,7 @@ function chaiFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -474,7 +474,7 @@ function doubleChocolateChipFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -493,7 +493,7 @@ function vanillaBeanFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -512,7 +512,7 @@ function whiteMochaCreamFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -530,7 +530,7 @@ function strawBerryCreamFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -555,7 +555,7 @@ function greenTeaFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -570,7 +570,7 @@ function syrupCreamFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -589,7 +589,7 @@ function oparahChaiFrapp(drink){
                 count: standardPumps(drink.size) - 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -611,7 +611,7 @@ function strawberrySmoothe(drink){
                 count: 1
             }
         ],
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
 }
@@ -636,7 +636,7 @@ function chocolateSmoothe(drink){
                 count: 1
             }
         ],
-        milk: milkTypes.WHOLE
+        milk: "Whole Milk"
     }
     return recipe;
 }
@@ -679,7 +679,7 @@ function chaiTeaLatte(drink){
                 count: standardPumps(drink.size)
             }
         ],
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
 }
@@ -694,7 +694,7 @@ function oparahChaiTeaLatte(drink){
                 count: standardPumps(drink.size)
             }
         ],
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
 }
@@ -709,7 +709,7 @@ function greenTeaLatte(drink){
                 count: standardPumps(drink.size)
             }
         ],
-        milk: milkTypes.TWOPERCENT
+        milk: "2% Milk"
     }
     return recipe;
 }
