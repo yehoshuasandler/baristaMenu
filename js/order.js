@@ -34,6 +34,7 @@ function orderDisplay(drink){
     let o = {
         name: "default Drink <br>",
         iced: "",
+        milk: "",
         syrups: "",
         other: "",
         size: "",
@@ -100,6 +101,14 @@ function orderDisplay(drink){
         o.iced = ""
     }
 
+
+    if(drink.recipe.milk){
+        o.milk = drink.recipe.milk + "<br>";
+    }
+    else{
+        o.milk = "";
+    }
+
     
     switch(drink.caffeine){
         case "Decaf":
@@ -135,6 +144,7 @@ function orderDisplay(drink){
             o.name + 
             o.shotDeclaration + 
             o.caffeine + 
+            o.milk +
             o.syrups + 
             o.other;
 }

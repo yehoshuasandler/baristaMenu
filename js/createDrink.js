@@ -37,6 +37,11 @@ function changeSize(drink, size) {
     return drink;
 }
 
+function changeMilk(drink, milk){
+    drink.recipe.milk = milk;
+    return drink;
+}
+
 function changeIced(drink){
     if(drink.iced === undefined)
         drink.iced = true;

@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function(){
                     case "SYRUP":
                         Object.assign(currentDrink.recipe, addSyrup(currentDrink.recipe, dataValue, currentDrink.size));
                         break;
+                    case "MILK":
+                        currentDrink = changeMilk(currentDrink,dataValue);
+                        break;
                     case "OTHER":
                         Object.assign(currentDrink.recipe, addOther(currentDrink.recipe, dataValue, currentDrink.size));
                         break;
