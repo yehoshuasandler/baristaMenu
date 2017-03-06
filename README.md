@@ -7,5 +7,12 @@ complex creating a drink order can be. These are the first stages of my efforts 
 recreate the interface.
 
 
-Not all data shows on the invoice yet. Open the developer tools to inspect the data 
-further and how each input changes the model.
+Not all functionality is completed such as changeing qauntiy of ingerdient amounts. 
+The rest is very proper
+
+##This Code is the Worst!
+That being said, let me tell you why. My goal for creating this app was to use it for training new 
+baristas but I designed the code this way you a tutorial series on converting a terrible designed code 
+base over a code base up to industry standards and using a popular JS framework. Knockout will be my 
+choice for this.
+
